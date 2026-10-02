@@ -1,2 +1,145 @@
 {
+  // =====================
+  // Basic Info (required)
+  // =====================
+  "basicInfo": {
+    // Licensing
+    "licensing": "Open-source (Solderpad Hardware License v2.1)",
+
+    // Target FPGA / ASIC
+    "targetFpgaOrAsic": "ZCU102",
+
+    // Design language
+    "designLanguage": "Verilog"
+  },
+
+  // =====================
+  // System-Level Features (optional)
+  // =====================
+
+
+  // =====================
+  // Architecture
+  // =====================
+  "architecture": {
+    // Type (required)
+    "type": "Von Neumann",
+
+    // N. Clock Domains (in sync with system, not internally generated) (required)
+    "numClockDomains": 2,
+
+    // Control Inteface (optional)
+    "controlInterface": {
+      // ISA Extension
+      "isaExtension": "N",
+
+      // Memory Mapped
+      "memoryMapped": "Y",
+
+      // Protocol
+      "protocol": "AXI4-Lite, SPI"
+    },
+
+    // Memory Interface (optional)
+
+    // Interrupts (optional)
+    "interrupts": "N"
+  },
+
+  // =====================
+  // Microarchitecture (optional)
+  // =====================
+  "microarchitecture": {
+    "parametrization": {
+      // Parametric N. of Units?
+      "parametricNumUnits": "N",
+
+      // Parametric Config?
+      "parametricConfig": "N"
+    },
+
+    "programmability": {
+      // Programmable Cores?
+      "programmableCores": "N",
+
+      // ISA Extension
+      "isaExtension": "N"
+    }
+  },
+
+  // =====================
+  // Software (optional)
+  // =====================
+  "software": {
+    "compiler": {
+      // Requires specialized compiler?
+      "requiresSpecializedCompiler": "N",
+
+      // Supported compiler(s)
+      "supportedCompilers": null
+    },
+
+    "hardwareAbstractionLayer": {
+      // HAL functions
+      "halFunctions": "Bare-metal HAL"
+    },
+
+    "highLevelApi": {
+      // Is there a high-level API/SDK?
+      "hasHighLevelApi": "N",
+
+      // SDK repository
+      "sdkRepository": "N.A.",
+
+      // Is there a domain specific compiler?
+      "hasDomainSpecificCompiler": "N"
+    }
+  },
+
+  // =====================
+  // Integration
+  // =====================
+  "integration": {
+    // ipDistribution.* (required)
+    "ipDistribution": {
+      // Manifest type
+      "manifestType": "Bender",
+
+      // Standalone simulation?
+      "standaloneSimulation": "Y",
+
+      // If above, SW requirements?
+      "standaloneSimulationSwRequirements": "QuestaSim",
+
+      // Integration documented / examples?
+      "integrationDocsOrExamples": "Y"
+    },
+
+    // synthesis.* (required)
+    "synthesis": {
+      // Is IP syntesizable?
+      "isSynthesizable": "Y",
+
+      // FPGA synthesis examples avail?
+      "fpgaSynthesisExamples": "Y",
+
+      // ASIC synthesis examples avail?
+      "asicSynthesisExamples": "N"
+    },
+
+    // simulation.* (required)
+    "simulation": {
+      // Closed-source simulation?
+      "closedSourceSimulation": "Y (QuestaSim)",
+
+      // Open-source simulation?
+      "openSourceSimulation": "N"
+    }
+
+    // Other integration elements (optional)
+  }
+
+  // =====================
+  // Physical Implementation (optional)
+  // =====================
 }

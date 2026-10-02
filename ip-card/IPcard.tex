@@ -1,0 +1,65 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+% \usepackage{longtable}
+% Optional for better URL wrapping: \usepackage{xurl} and \usepackage{hyperref}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+
+\begin{table}[h!]
+% \caption{IP Card}
+% \resizebox{\textwidth}{!}{%
+\centering
+\scalebox{0.5558}{%
+\begin{tabular}{@{}llp{0.65\textwidth}@{}}
+\toprule
+\multicolumn{3}{c}{\textbf{Basic Info}} \\ \toprule
+\textit{Licensing} &  & Open-source (Solderpad Hardware License v2.1) \\
+\midrule
+\textit{Target FPGA or ASIC} &  & ZCU102 \\
+\midrule
+\textit{Design Language} &  & Verilog \\
+\toprule
+\multicolumn{3}{c}{\textbf{Architecture}} \\ \toprule
+\textit{Type} &  & Von Neumann \\
+\midrule
+\textit{Num Clock Domains} &  & 2 \\
+\midrule
+\multirow{3}{*}{\textit{Control Interface}} & ISAExtension & N \\
+ & Memory Mapped & Y \\
+ & Protocol & AXI4-Lite, SPI \\
+\midrule
+\textit{Interrupts} &  & N \\
+\toprule
+\multicolumn{3}{c}{\textbf{Microarchitecture}} \\ \toprule
+\multirow{2}{*}{\textit{Parametrization}} & Parametric Num Units & N \\
+ & Parametric Config & N \\
+\midrule
+\multirow{2}{*}{\textit{Programmability}} & Programmable Cores & N \\
+ & ISAExtension & N \\
+\toprule
+\multicolumn{3}{c}{\textbf{Software}} \\ \toprule
+\multirow{2}{*}{\textit{Compiler}} & Requires Specialized Compiler & N \\
+ & Supported Compilers &  \\
+\midrule
+\multirow{1}{*}{\textit{Hardware Abstraction Layer}} & HAL Functions & Bare-metal HAL \\
+\midrule
+\multirow{3}{*}{\textit{highLevelAPI}} & Has High Level API & N \\
+ & SDK Repository & N.A. \\
+ & Has Domain Specific Compiler & N \\
+\toprule
+\multicolumn{3}{c}{\textbf{Integration}} \\ \toprule
+\multirow{4}{*}{\textit{IP Distribution}} & Manifest Type & Bender \\
+ & Standalone Simulation & Y \\
+ & Standalone Simulation SW Requirements & QuestaSim \\
+ & Integration Docs Or Examples & Y \\
+\midrule
+\multirow{3}{*}{\textit{Synthesis}} & Is Synthesizable & Y \\
+ & FPGA Synthesis Examples & Y \\
+ & ASIC Synthesis Examples & N \\
+\midrule
+\multirow{2}{*}{\textit{Simulation}} & Closed Source Simulation & Y (QuestaSim) \\
+ & Open Source Simulation & N \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
