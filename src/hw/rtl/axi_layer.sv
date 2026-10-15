@@ -12,7 +12,6 @@
 // Michelangelo Barocci <michelangelo.barocci@polito.it>
 
 `include "cheshire/typedef.svh"
-`include "include/axi_macros.svh"
 `include "axi-rt/assign.svh"
 `include "axi-rt/port.svh"
 `include "axi/typedef.svh"

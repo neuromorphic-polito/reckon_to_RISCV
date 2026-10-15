@@ -1,0 +1,37 @@
+# Copyright 2026 Michelangelo Barocci, Politecnico di Torino.
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
+# Solderpad Hardware License, Version 2.1, see LICENSE-SHL for details.
+#
+# Michelangelo Barocci <michelangelo.barocci@polito.it>
+
+package:
+  name: reckon_axi
+  authors:
+    - "Michelangelo Barocci <michelangelo.barocci@polito.it>"
+
+dependencies:
+  axi:    { git: "https://github.com/pulp-platform/axi.git",    version: 0.39.8 }
+  axi_rt: { git: "https://github.com/pulp-platform/axi_rt.git", version: 0.0.0-alpha.10 }
+
+sources:
+  - defines:
+      ADDR_WIDTH: 16
+    files:
+      # Memories
+      - src/hw/rtl/BRAM_1port_we.v
+      - src/hw/rtl/BRAM_2ports_we.v
+      - src/hw/rtl/RAM_wrapper.v
+      # ReckOn core
+      - src/hw/rtl/reckon/lfsr_neur_stochround.v
+      - src/hw/rtl/reckon/lfsr_noise_neur.v
+      - src/hw/rtl/reckon/lfsr_oneur_stochround.v
+      - src/hw/rtl/reckon/lfsr_winp_wrec.v
+      - src/hw/rtl/reckon/lfsr_wout.v
+      - src/hw/rtl/reckon/spi_slave.v
+      - src/hw/rtl/reckon/srnn.v
+      - src/hw/rtl/reckon/reckon.v
+      # AXI interface and top level
+      - src/hw/rtl/aer_decoder.v
+      - src/hw/rtl/axi_rf.sv
+      - src/hw/rtl/axi_layer.sv
+      - src/hw/rtl/reckon_axi_top.v
